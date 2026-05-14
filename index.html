@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JoseMed</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+<header>
+<div class="logo-name">
+      <img src="images/logo.PNG" alt="Hospital Logo" class="logo">
+      <span class="hospital-name">JoseMed Health Care</span>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+          <a href="aboutUs.html">About Us</a>
+         <!-- <ul class="dropdown-menu">
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>-->
+        </li>
+        <li class="dropdown">
+          <a href="#">Our Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Home Care</a></li>
+            <li><a href="checkup.html">Checkups</a></li>
+            <li><a href="#">Emergency</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+</header>
+
+
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Say hello to Adequate Services</h1>
+      <p>
+        JoseMed brings flexible, comprehensive, and personalized health evaluations
+        right to your front door, available tools for First Aid and medical field. Furthermore, available for Seminar and health talk. Its our custom that our experienced clinicians, supported by innovative
+        technology, visit people within range with the goal of improving health outcomes,
+        closing gaps in care and providing connections to the right care for their unique needs.
+      </p>
+      <div class="buttons">
+        <button class="dark-btn">Here's How</button>
+        <button class="light-btn">Schedule Your Visit</button>
+      </div>
+    </div>
+
+    <div class="hero-right">
+  <h2>Prepare for your:</h2>
+  <ul class="link-list">
+    <li><a href="homecare.html" target="_blank">➤Home Care Services</a></li>
+    <li><a href="https://www.example.com/services" target="_blank">➤Video Visit</a></li>
+    <li><a href="https://www.example.com/contact" target="_blank">➤Focused Visit</a></li>
+    <li><a href="https://www.example.com/appointments" target="_blank">➤Telehealth</a></li>
+    <li><a href="https://www.example.com/blog" target="_blank">➤Read Our Blog</a></li>
+  </ul>
+    </div>
+  </section>
+
+
+<section>
+  <h2>Why Personal Health Care Matters</h2>
+  <p>
+    Taking care of your health is one of the most important decisions you can make. </p>
+   <p> Personal health care helps you stay ahead of potential illnesses, maintain physical and mental balance
+     and improve your overall quality of life.</p>
+  </p>
+  <p>
+    Whether it’s regular check-ups, a healthy diet or staying active, small steps make a big difference. 
+    At JoseMed Health Care, we believe in empowering you with the tools and knowledge you need to live a longer, healthier and happier life.
+  </p>
+</section>
+
+  
+ <div class="container">
+    <!-- Left Side (Slideshow) -->
+    <div class="left">
+      <div class="slide active" style="background-image: url('images/img.PNG');"></div>
+      <div class="slide" style="background-image: url('images/img2.jpg');"></div>
+      <div class="slide" style="background-image: url('images/health\ pic3.jpg');"></div>
+      <div class="slide" style="background-image: url('images/health\ pic2.jpeg');"></div>
+      <div class="slide" style="background-image: url('images/healthtip\ pic.jpg');"></div>
+      <div class="slide" style="background-image: url('images/health\ pic3.jpg');"></div>
+      <div class="slide" style="background-image: url('images/vitals.jpg');"></div>
+
+      <div class="caption">
+        <h1 id="slideTitle">Welcome</h1>
+        <p id="slideSubtitle">This is the first slide of the presentation.</p>
+      </div>
+    </div>
+
+    <!-- Right Side (Details) -->
+    <div class="right">
+      <h2>About This Section</h2>
+      <p>This layout contains a sliding image presentation on the left with 7 different slides. Each slide displays a unique title and subtitle along with a dimmed image in the background.</p>
+      <p>The right side is static and displays details about the content. This structure is suitable for onboarding pages, product showcases, or storytelling experiences.</p>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const titles = [
+      " Eat a Balanced Diet",
+      "Stay Physically Active",
+      "CrStay Hydrated",
+      " Get Regular Check-ups",
+      "IPrioritize Mental Health",
+      "LeGet Enough Sleep",
+      "Avoid Harmful Habits"
+    ];
+    const subtitles = [
+      "Incorporate fruits, vegetables, whole grains, lean proteins, and healthy fats into your meals. Limit sugar, salt, and processed foods to reduce your risk of chronic diseases.",
+      "Aim for at least 30 minutes of moderate exercise most days of the week. Walking, swimming, cycling, or dancing can boost heart health, strengthen muscles, and improve mood.",
+      "Drink enough water daily—usually 6 to 8 glasses. Proper hydration helps digestion, circulation, and temperature regulation.",
+      "Visit your licensed professional nurse and doctor for routine screenings such as blood pressure monitoring, blood sugar check and other vital signs, vaccinations and health assessments. Early detection of problems can prevent serious complications.",
+      "Manage stress through relaxation techniques, talk therapy, mindfulness, or hobbies. Don’t hesitate to seek professional help if you feel overwhelmed.",
+      "Adults need 7–9 hours of sleep per night. Quality sleep restores the body, boosts immunity, and supports brain function.",
+      "Limit alcohol, avoid smoking, and stay away from drug abuse. These habits can lead to serious health conditions and shorten lifespan."
+    ];
+
+    const titleEl = document.getElementById('slideTitle');
+    const subtitleEl = document.getElementById('slideSubtitle');
+    let index = 0;
+
+    function showSlide(i) {
+      slides.forEach((slide, idx) => {
+        slide.classList.remove('active');
+        if (idx === i) slide.classList.add('active');
+      });
+      titleEl.textContent = titles[i];
+      subtitleEl.textContent = subtitles[i];
+    }
+
+    setInterval(() => {
+      index = (index + 1) % slides.length;
+      showSlide(index);
+    }, 8000); // every 4 seconds
+  </script>
+
+
+  
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Left side with logo and info -->
+      <div class="footer-left">
+        <img src="images/logo.PNG" alt="Company Logo" class="footer-logo">
+        <div class="footer-info">
+          <h3>JoseMed Health Services</h3>
+          <p>We care, bringing healthcare to your doorstep.</p>
+          <p>© 2025 JoseMed. All rights reserved.</p>
+        </div>
+      </div>
+
+      <!-- Right side with quick links, contact & newsletter -->
+      <div class="footer-right">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Book Appointment</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-envelope"></i> info@josemed.com</p>
+          <p><i class="fas fa-phone"></i> +234-901-234-5678</p>
+          <p><i class="fas fa-map-marker-alt"></i> Otukpo, Benue State, Nigeria.</p>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Subscribe for updates and offers:</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 JoseMed. Designed by Daniel Obekpa</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

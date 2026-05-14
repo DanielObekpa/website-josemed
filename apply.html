@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appointment Booking</title>
+</head>
+<body>
+  <h2>Home Care Appointment Booking</h2>
+  <form id="bookingForm">
+    <input name="name" placeholder="Full Name" required><br><br>
+
+    <select name="gender" required>
+      <option value="">Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select><br><br>
+
+    <input name="phone" placeholder="Phone Number" required><br><br>
+    <input name="address" placeholder="Address" required><br><br>
+
+    <label>Select Time Slot:</label><br>
+    <select name="scheduleTime" id="timeSlotSelect" required></select><br><br>
+
+    <button type="submit">Book Appointment</button>
+  </form>
+
+ <script>
+  const scriptURL = "https://script.google.com/macros/s/AKfycbw785WMzA3GnjeDHF5nf5FDBiEEoAeJWpwug8WVeAVkEo2cHFuENZ7Lpe4HsSR2DPxzbA/exec";
+
+  // This function loads available slots
+  async function loadSlots() {
+    try {
+      const response = await fetch(scriptURL);
+      const bookedSlots = await response.json();
+
+      const allSlots = [
+        "9:00 AM - 10:30 AM",
+        "10:30 AM - 12:00 PM",
+        "12:00 PM - 1:30 PM",
+        "1:30 PM - 3:00 PM",
+        "3:00 PM - 4:30 PM",
+        "4:30 PM - 6:00 PM"
+      ];
+
+      const availableSlots = allSlots.filter(slot => !bookedSlots.includes(slot));
+      const select = document.getElementById("scheduleTime");
+      select.innerHTML = ""; // Clear any old options
+
+      availableSlots.forEach(slot => {
+        const option = document.createElement("option");
+        option.value = slot;
+        option.textContent = slot;
+        select.appendChild(option);
+      });
+    } catch (err) {
+      alert("Failed to load time slots. Please check your script deployment.");
+      console.error(err);
+    }
+  }
+
+  window.onload = loadSlots;
+</script>
+
+</body>
+</html>

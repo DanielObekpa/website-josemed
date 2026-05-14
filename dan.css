@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background-color: #0077b6;
+  color: white;
+  position: relative;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.hospital-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+
+.nav-menu {
+  list-style: none;
+  display: inline-flex;
+  gap: 30px;
+  position: relative;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #023e8a;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.nav-menu .dropdown-menu li {
+  width: 100%;
+}
+
+.nav-menu .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-menu .dropdown-menu a:hover {
+  background-color: #0096c7;
+}

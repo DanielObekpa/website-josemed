@@ -1,0 +1,374 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background-color: #0077b6;
+  color: white;
+  position: relative;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logo {
+  width: 70px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.hospital-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav {
+  flex: 2;
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+
+.nav-menu {
+  list-style: none;
+  display: inline-flex;
+  gap: 30px;
+  position: relative;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav-menu .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: #023e8a;
+  min-width: 160px;
+  z-index: 1000;
+}
+
+.nav-menu .dropdown-menu li {
+  width: 100%;
+}
+
+.nav-menu .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-menu .dropdown-menu a:hover {
+  background-color: #0096c7;
+}
+
+
+
+
+
+
+header {
+  background-color: #00747d;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+
+/*Sub header*/
+.title-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-title {
+  font-size: 3em;
+  font-weight: 700;
+  color: #0d47a1;
+  margin-bottom: 20px;
+}
+
+.sub-title {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #455a64;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+
+
+
+.hero {
+  background: url('https://images.unsplash.com/photo-1576765607924-3c7c89834c61') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 3em;
+}
+
+.hero .btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #ffcc00;
+  color: #000;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.checkup-details {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.checkup-details h2, .checkup-details h3 {
+  color: #0066cc;
+}
+
+.checkup-details ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.doctors {
+  background: url('images/img2.PNG') no-repeat center center/cover;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.doctors h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.doctor-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.doctor-card {
+  background-color: rgba(0, 102, 204, 0.85);
+  border-radius: 12px;
+  padding: 20px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.doctor-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.doctor-card h3 {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #ffcc00;
+}
+
+.doctor-card p {
+  margin: 5px 0 0;
+  font-size: 0.95em;
+}
+
+
+
+
+
+
+/*footer note*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.footer {
+  background-color: #003333;
+  color: white;
+  padding: 40px 30px 20px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.footer-info h3 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  flex: 2;
+  min-width: 250px;
+}
+
+.footer-section {
+  min-width: 200px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid teal;
+  padding-bottom: 5px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #00ffff;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.footer-section i {
+  margin-right: 8px;
+  color: #00ffff;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.newsletter-form button {
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: darkcyan;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00ffff;
+}
+
+.footer hr {
+  border: 0;
+  border-top: 1px solid #00aaaa;
+  margin: 30px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
+}

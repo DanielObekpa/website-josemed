@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Care Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="appointment.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo-name">
+      <img src="images/logo_.PNG" alt="Hospital Logo" class="logo">
+      <span class="hospital-name">JoseMed healthCare</span>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="aboutUs.html">About Us</a>
+         <!-- <ul class="dropdown-menu">
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>-->
+        </li>
+        <li class="dropdown">
+          <a href="#">Our Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Home Care</a></li>
+            <li><a href="#">Checkups</a></li>
+            <li><a href="#">Emergency</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+
+    <!--
+    <h1>Home Care Services</h1>
+    <p>Compassionate and professional care from the comfort of your home</p>
+  -->
+  </header>
+
+
+
+<section class="appointment-form">
+  <h2>Book an Appointment</h2>
+  <form action="submit_appointment.php" method="POST">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="time">Select Time Slot:</label>
+   <select id="time" name="time" required>
+  <option value="">--Select Time--</option>
+  <option value="09:00">09:00 AM - 11:00 AM</option>
+  <option value="11:00">11:00 AM - 01:00 PM</option>
+  <option value="13:00">01:00 PM - 03:00 PM</option>
+  <option value="15:00">03:00 PM - 05:00 PM</option>
+  <option value="17:00">05:00 PM - 07:00 PM</option>
+</select>
+
+<script>
+  // Example: Booked times for today (in real use, fetch from server)
+  const bookedTimes = ['11:00', '15:00'];
+
+  const timeSelect = document.getElementById('time');
+
+  // Disable booked options
+  [...timeSelect.options].forEach(option => {
+    if (bookedTimes.includes(option.value)) {
+      option.disabled = true;
+      option.text += ' (Booked)';
+    }
+  });
+</script>
+
+    <label for="service">Service Type:</label>
+    <select id="service" name="service" required>
+      <option value="">--Choose Service--</option>
+      <option>General Checkup</option>
+      <option>Heart Screening</option>
+      <option>Blood Test</option>
+      <option>Diabetes Monitoring</option>
+    </select>
+
+    <button type="submit">Submit Appointment</button>
+  </form>
+</section>
+
+
+
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Left side with logo and info -->
+      <div class="footer-left">
+        <img src="images/logo.PNG" alt="Company Logo" class="footer-logo">
+        <div class="footer-info">
+          <h3>JoseMed Health Services</h3>
+          <p>We care, bringing healthcare to your doorstep.</p>
+          <p>© 2025 JoseMed. All rights reserved.</p>
+        </div>
+      </div>
+
+      <!-- Right side with quick links, contact & newsletter -->
+      <div class="footer-right">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Book Appointment</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-envelope"></i> info@josemed.com</p>
+          <p><i class="fas fa-phone"></i> +234-901-234-5678</p>
+          <p><i class="fas fa-map-marker-alt"></i> Otukpo, Benue State, Nigeria.</p>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Subscribe for updates and offers:</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 JoseMed. Designed by Daniel Obekpa</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

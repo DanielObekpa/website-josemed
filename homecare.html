@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Care Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="homecare.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo-name">
+      <img src="images/logo_.PNG" alt="Hospital Logo" class="logo">
+      <span class="hospital-name">JoseMed healthCare</span>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="aboutUs.html">About Us</a>
+         <!-- <ul class="dropdown-menu">
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>-->
+        </li>
+        <li class="dropdown">
+          <a href="#">Our Services</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Home Care</a></li>
+            <li><a href="#">Checkups</a></li>
+            <li><a href="#">Emergency</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+
+
+    <!--
+    <h1>Home Care Services</h1>
+    <p>Compassionate and professional care from the comfort of your home</p>
+  -->
+  </header>
+
+
+  <!--Sub header Section-->
+<section class="title-section">
+  <h1 class="main-title">Welcome to Our HealthCare Center</h1>
+  <p class="sub-title">Committed to providing compassionate, quality care for every patient</p>
+</section>
+
+  
+
+
+  <section class="service">
+    <img src="images/img1.jpg" alt="Personal Care Assistance">
+    <div class="service-content">
+      <h2>Personal Care Assistance</h2>
+      <p>
+        We provide support with essential daily activities such as bathing, dressing, grooming, and hygiene.
+        Our caregivers ensure your loved ones maintain their dignity and independence in a safe and respectful environment.
+      </p>
+    </div>
+  </section>
+
+  <section class="service reverse">
+    <img src="images/img2.jpg" alt="Medication Management">
+    <div class="service-content">
+      <h2>Medication Management</h2>
+      <p>
+        Our trained professionals help manage medications through reminders and administration support,
+        reducing the risk of missed doses or incorrect intake. We prioritize safety and adherence to doctor’s instructions.
+      </p>
+    </div>
+  </section>
+
+  <section class="service">
+    <img src="images/wound care.jpg" alt="Wound Care">
+    <div class="service-content">
+      <h2>Wound Care</h2>
+      <p>
+        We offer professional wound dressing and care to promote healing and prevent infections.
+        Our nurses are skilled in managing surgical wounds, pressure sores, and chronic injuries with utmost care.
+      </p>
+    </div>
+  </section>
+
+  <section class="service reverse">
+    <img src="images/crutch img.jpg" alt="Mobility Assistance">
+    <div class="service-content">
+      <h2>Mobility Assistance</h2>
+      <p>
+        Our team provides reliable help with walking, transferring from bed to chair, and using mobility aids.
+        We aim to prevent falls and improve the overall confidence and mobility of our clients.
+      </p>
+    </div>
+  </section>
+
+
+
+
+
+  <div class="container">
+    <!-- Contact Us Form -->
+    <div class="form-section">
+      <h2>Contact Us</h2>
+      <form>
+        <label>Full Name:</label>
+        <input type="text" required />
+        <label>Email Address:</label>
+        <input type="email" required />
+        <label>Message:</label>
+        <textarea rows="5"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Book an Appointment Form -->
+    <div class="form-section">
+      <h2>Book an Appointment</h2>
+      <form id="appointment-form">
+        <label>Full Name:</label>
+        <input type="text" required />
+        <label>Email:</label>
+        <input type="email" required />
+        <label>Select Service:</label>
+        <select required>
+          <option>-- Select --</option>
+          <option>Medical Checkup</option>
+          <option>Home Care</option>
+          <option>Consultation</option>
+        </select>
+        <label>Choose Date:</label>
+        <input type="date" id="appointment-date" required />
+        <button type="submit">Book Now</button>
+      </form>
+      <div id="time-slots"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <!-- Left side with logo and info -->
+      <div class="footer-left">
+        <img src="images/logo.PNG" alt="Company Logo" class="footer-logo">
+        <div class="footer-info">
+          <h3>JoseMed Health Services</h3>
+          <p>We care, bringing healthcare to your doorstep.</p>
+          <p>© 2025 JoseMed. All rights reserved.</p>
+        </div>
+      </div>
+
+      <!-- Right side with quick links, contact & newsletter -->
+      <div class="footer-right">
+        <!-- Quick Links -->
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Book Appointment</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <p><i class="fas fa-envelope"></i> info@josemed.com</p>
+          <p><i class="fas fa-phone"></i> +234-901-234-5678</p>
+          <p><i class="fas fa-map-marker-alt"></i> Otukpo, Benue State, Nigeria.</p>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="footer-section">
+          <h4>Newsletter</h4>
+          <p>Subscribe for updates and offers:</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <!-- Social Media Icons -->
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 JoseMed. Designed by Daniel Obekpa</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>
