@@ -1,3 +1,28 @@
+/* Desktop View */
+.container{
+    display: flex;
+    gap: 20px;
+}
+
+/* Phone View */
+@media screen and (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+/*the body*/
 body {
   margin: 0;
   font-family: Arial, sans-serif;
