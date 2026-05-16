@@ -479,3 +479,64 @@ form button:hover {
   font-size: 14px;
   color: #ccc;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+  .container{
+    flex-direction: column;
+    height: auto; /* IMPORTANT */
+  }
+
+  .left,
+  .right{
+    width: 100%; /* IMPORTANT */
+  }
+
+  header{
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  nav{
+    justify-content: center;
+  }
+
+  .nav-menu{
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .hero{
+    flex-direction: column;
+  }
+
+  .hero-content,
+  .hero-right{
+    margin-right: 0;
+    width: 100%;
+  }
+
+  section h2{
+    font-size: 22px;
+  }
+
+  section p{
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+}
