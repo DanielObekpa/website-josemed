@@ -540,3 +540,86 @@ form button:hover {
   }
 
 }
+
+
+
+
+
+
+/* =========================
+   RESPONSIVE FIX (DO NOT TOUCH DESIGN ABOVE)
+========================= */
+
+@media screen and (max-width: 768px){
+
+  /* HEADER FIX */
+  header{
+    flex-direction: column;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  .logo-name{
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-menu{
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  /* HERO FIX */
+  .hero{
+    flex-direction: column;
+  }
+
+  .hero-content,
+  .hero-right{
+    width: 100%;
+    margin-right: 0;
+  }
+
+  /* TEXT SECTION FIX */
+  section{
+    padding: 10px;
+  }
+
+  section h2{
+    font-size: 22px;
+  }
+
+  section p{
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  /* SLIDER FIX (MOST IMPORTANT PART) */
+  .container{
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left{
+    width: 100%;
+    height: 300px; /* important for slideshow */
+  }
+
+  .right{
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* BUTTONS */
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dark-btn,
+  .light-btn{
+    width: 100%;
+  }
+}
