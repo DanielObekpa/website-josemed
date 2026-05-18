@@ -348,6 +348,33 @@ form button:hover {
 
 
 
+
+/* Normal desktop styles */
+body{
+    background: white;
+}
+
+.container{
+    display: flex;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    body{
+        background: lightblue;
+    }
+}
+
+
+
+
+
+
 /*footer note*/
 .footer {
   background-color: #003333;
