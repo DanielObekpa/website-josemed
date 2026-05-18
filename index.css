@@ -1,14 +1,8 @@
-/* =========================
-   BASE RESET
-========================= */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
-/* =========================
-   HEADER (DESKTOP)
-========================= */
 header {
   display: flex;
   align-items: center;
@@ -16,18 +10,19 @@ header {
   padding: 15px 50px;
   background-color: #0077b6;
   color: white;
-  flex-wrap: wrap;
+  position: relative;
 }
 
 .logo-name {
   display: flex;
   align-items: center;
-  gap: 10px;
+  flex: 1;
 }
 
 .logo {
   width: 50px;
   height: 50px;
+  margin-right: 10px;
 }
 
 .hospital-name {
@@ -35,27 +30,35 @@ header {
   font-weight: bold;
 }
 
-/* NAV */
 nav {
+  flex: 2;
   display: flex;
+  justify-content: flex-start; /* Align to the left */
 }
 
 .nav-menu {
   list-style: none;
   display: flex;
   gap: 30px;
-  padding: 0;
-  margin: 0;
+}
+
+
+.nav-menu {
+  list-style: none;
+  display: inline-flex;
+  gap: 30px;
+  position: relative;
+}
+
+.nav-menu li {
+  position: relative;
 }
 
 .nav-menu a {
   text-decoration: none;
   color: white;
-}
-
-/* DROPDOWN */
-.nav-menu li {
-  position: relative;
+  padding: 10px 15px;
+  display: block;
 }
 
 .nav-menu .dropdown-menu {
@@ -64,63 +67,211 @@ nav {
   top: 100%;
   background-color: #023e8a;
   min-width: 160px;
+  z-index: 1000;
+    list-style: none;
+}
+
+.nav-menu .dropdown-menu li {
+  width: 100%;
 }
 
 .nav-menu .dropdown:hover .dropdown-menu {
   display: block;
 }
 
-/* =========================
-   HERO (DESKTOP)
-========================= */
-.hero {
-  display: flex;
-  flex-wrap: wrap;
-  background: url('images/img.webp') center/cover no-repeat;
-  padding: 40px;
-  color: white;
+.nav-menu .dropdown-menu a:hover {
+  background-color: #0096c7;
 }
 
-.hero-content {
-  flex: 2;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-}
 
-.hero-right {
-  flex: 1;
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-}
 
-.link-list {
-  list-style: none;
-  padding: 0;
-}
 
-/* =========================
-   SECTION TEXT
-========================= */
+
+/** why personal health matter text section*/
 section {
-  padding: 20px;
   border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ 
 }
 
 section h2 {
   text-align: center;
   font-size: 2.5rem;
+  margin-bottom: 60px;
+  margin-top: 60px;
+
 }
 
 section p {
-  text-align: center;
   font-size: 1.15rem;
   line-height: 1.8;
+text-align: center;
+  margin-bottom: 60px;
+  /**text-align: justify; */
 }
 
-/* =========================
-   SLIDER CONTAINER
-========================= */
+
+
+
+
+
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  background: url('images/img.webp') no-repeat center center/cover;
+  padding: 40px 30px;
+  color: #fff;
+}
+
+.hero-content {
+  flex: 2;
+  background: rgba(0, 20, 50, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.hero-content h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.dark-btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.light-btn {
+  background-color: #c4d600;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.hero-right {
+  flex: 1;
+  background: rgba(0, 20, 50, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.hero-right h3 {
+  margin-bottom: 15px;
+}
+
+.hero-right ul {
+  list-style: none;
+  padding: 0;
+}
+
+.hero-right ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+
+
+
+/*left hand side- prepare for your: */
+ul.link-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.link-list li {
+  margin-bottom: 10px;
+}
+
+ul.link-list li a {
+  text-decoration: none;
+  color: white; /* Set text color to white */
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+ul.link-list li a:hover {
+  color: #00ffff; /* Optional: cyan on hover */
+}
+
+
+
+
+
+.contact-booking {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 10%;
+  background-color: #eef8f8;
+  gap: 40px;
+}
+
+.contact-form,
+.appointment-form {
+  flex: 1;
+  min-width: 300px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact-form h2,
+.appointment-form h2 {
+  color: #00747d;
+  margin-bottom: 10px;
+}
+
+.contact-form p,
+.appointment-form p {
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+form button {
+  background-color: #00747d;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background-color: #005e68;
+}
+
+
+
+
+
+
 .container {
   display: flex;
   width: 100%;
@@ -131,13 +282,7 @@ section p {
   width: 60%;
   position: relative;
   overflow: hidden;
-  background: black;
-}
-
-.right {
-  width: 40%;
-  padding: 40px;
-  background: #f4f4f4;
+  background-color: #000;
 }
 
 .slide {
@@ -145,7 +290,7 @@ section p {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
   background-size: cover;
   background-position: center;
   filter: brightness(40%);
@@ -154,84 +299,182 @@ section p {
 .slide.active {
   opacity: 1;
 }
+/**
+.caption {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: #fff;
+  z-index: 10;
+}
+**/
 
-/* caption */
 .caption {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  transform: translate(-50%, -50%); /* Center both vertically and horizontally */
+  color: #fff;
   text-align: center;
+  z-index: 10;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.caption h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.caption p {
+  font-size: 1.2rem;
+}
+
+.right {
+  width: 40%;
+  padding: 40px;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+}
+
+.right h2 {
+  margin-bottom: 20px;
+}
+
+.right p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+
+
+/*footer note*/
 .footer {
-  background: #003333;
+  background-color: #003333;
   color: white;
-  text-align: center;
-  padding: 20px;
+  padding: 20px 10px 20px;
 }
 
-/* =========================
-   MOBILE VIEW (FIXED)
-========================= */
-@media screen and (max-width: 768px) {
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
 
-  /* HEADER STACK */
-  header {
-    flex-direction: column;
-    text-align: center;
-    padding: 15px 20px;
-  }
+.footer-left {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex: 1;
+  min-width: 250px;
+}
 
-  .nav-menu {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
+.footer-logo {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+}
 
-  /* HERO STACK */
-  .hero {
-    flex-direction: column;
-    padding: 20px;
-  }
+.footer-info h3 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
 
-  .hero-content,
-  .hero-right {
-    width: 100%;
-  }
+.footer-right {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  flex: 2;
+  min-width: 250px;
+}
 
-  /* TEXT */
-  section h2 {
-    font-size: 22px;
-  }
+.footer-section {
+  min-width: 200px;
+}
 
-  section p {
-    font-size: 15px;
-    padding: 0 10px;
-  }
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid teal;
+  padding-bottom: 5px;
+}
 
-  /* SLIDER FIX */
-  .container {
-    flex-direction: column;
-    height: auto;
-  }
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .left {
-    width: 100%;
-    height: 300px;
-  }
+.footer-section ul li {
+  margin-bottom: 8px;
+}
 
-  .right {
-    width: 100%;
-    padding: 20px;
-  }
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-  /* DROPDOWN FIX FOR MOBILE */
-  .nav-menu .dropdown-menu {
-    position: static;
-  }
+.footer-section ul li a:hover {
+  color: #00ffff;
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.footer-section i {
+  margin-right: 8px;
+  color: #00ffff;
+}
+
+.newsletter-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.newsletter-form button {
+  background-color: teal;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: darkcyan;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00ffff;
+}
+
+.footer hr {
+  border: 0;
+  border-top: 1px solid #00aaaa;
+  margin: 30px 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #ccc;
 }
