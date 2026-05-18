@@ -350,13 +350,8 @@ form button:hover {
 
 
 /* Normal desktop styles */
-body{
-    background: white;
-}
 
-.container{
-    display: flex;
-}
+
 
 /* Mobile styles */
 @media screen and (max-width: 768px){
