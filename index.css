@@ -500,3 +500,31 @@ form button:hover {
   font-size: 14px;
   color: #ccc;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile styles */
+@media screen and (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    body{
+        background: lightblue;
+    }
+}
+
