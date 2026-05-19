@@ -21,7 +21,7 @@ header {
 
 .logo {
 width: 100%;
-max-width: 1200px;
+
   height: 50px;
   margin-right: 10px;
 }
@@ -379,7 +379,7 @@ max-width: 1200px;
 
 .footer-logo {
 width: 100%;
-max-width: 1200px;
+
   height: auto;
   border-radius: 8px;
 }
