@@ -20,7 +20,8 @@ header {
 }
 
 .logo {
-  width: 50px;
+width: 100%;
+max-width: 1200px;
   height: 50px;
   margin-right: 10px;
 }
@@ -245,6 +246,7 @@ form input,
 form select,
 form textarea {
   width: 100%;
+max-width: 1200px;
   padding: 12px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -274,12 +276,14 @@ form button:hover {
 
 .container {
   display: flex;
-  width: 100%;
+width: 100%;
+max-width: 1200px;
   height: 100vh;
 }
 
 .left {
-  width: 60%;
+  width: 100%;
+max-width: 1200px;
   position: relative;
   overflow: hidden;
   background-color: #000;
@@ -287,7 +291,8 @@ form button:hover {
 
 .slide {
   position: absolute;
-  width: 100%;
+width: 100%;
+max-width: 1200px;
   height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -329,7 +334,8 @@ form button:hover {
 }
 
 .right {
-  width: 40%;
+  width: 100%;
+max-width: 1200px;
   padding: 40px;
   background-color: #f4f4f4;
   overflow-y: auto;
@@ -372,7 +378,8 @@ form button:hover {
 }
 
 .footer-logo {
-  width: 80px;
+width: 100%;
+max-width: 1200px;
   height: auto;
   border-radius: 8px;
 }
