@@ -478,3 +478,157 @@ form button:hover {
   font-size: 14px;
   color: #ccc;
 }
+
+
+
+
+
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+@media screen and (max-width: 768px) {
+
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .logo-name {
+    margin-bottom: 15px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .nav-menu a {
+    padding: 10px 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .hero-content {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hero-right {
+    width: 100%;
+  }
+
+  /* Buttons */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dark-btn,
+  .light-btn {
+    width: 100%;
+  }
+
+  /* General Section */
+  section {
+    padding: 20px;
+  }
+
+  section h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  section p {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  /* Slideshow Container */
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    height: 400px;
+  }
+
+  .caption {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .caption h1 {
+    font-size: 24px;
+  }
+
+  .caption p {
+    font-size: 15px;
+  }
+
+  .right {
+    padding: 20px;
+  }
+
+  /* Footer */
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-left {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+
+  /* Newsletter */
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
