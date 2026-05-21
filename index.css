@@ -275,9 +275,9 @@ form button:hover {
 .container {
   display: flex;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
 }
-
 .left {
   width: 60%;
   position: relative;
@@ -488,201 +488,206 @@ form button:hover {
 /* =========================
    MOBILE RESPONSIVE DESIGN
 ========================= */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 
-  body {
+  *{
+    box-sizing: border-box;
+  }
+
+  body{
     overflow-x: hidden;
   }
 
   /* HEADER */
-  header {
-    flex-direction: row;
+  header{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 15px;
-    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
   }
 
-  .logo-name {
-    width: 100%;
-    margin-bottom: 10px;
+  .logo-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
   }
 
-  .logo {
-    width: 45px;
-    height: 45px;
+  .logo{
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
   }
 
-  .hospital-name {
+  .hospital-name{
     font-size: 18px;
     line-height: 1.2;
   }
 
-  nav {
+  nav{
     width: 100%;
   }
 
-  .nav-menu {
+  .nav-menu{
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    width: 100%;
+    align-items: center;
+    gap: 10px;
     padding: 0;
     margin: 0;
   }
 
-  .nav-menu li {
+  .nav-menu li{
     width: 100%;
+    text-align: center;
   }
 
-  .nav-menu a {
+  .nav-menu a{
+    display: block;
+    width: 100%;
     padding: 10px;
     font-size: 16px;
-    border-radius: 5px;
   }
 
   /* DROPDOWN */
-  .nav-menu .dropdown-menu {
+  .nav-menu .dropdown-menu{
     position: static;
     width: 100%;
-    background-color: #005f8d;
   }
 
   /* HERO SECTION */
-  .hero {
+  .hero{
+    display: flex;
     flex-direction: column;
     padding: 15px;
-    gap: 15px;
+    gap: 20px;
   }
 
-  .hero-content,
-  .hero-right {
+  .hero-content{
     width: 100%;
     margin: 0;
     padding: 20px;
-    box-sizing: border-box;
+    border-radius: 15px;
   }
 
-  .hero-content h1 {
-    font-size: 20px;
-    line-height: 1.3;
+  .hero-content h1{
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
   }
 
-  .hero-content p {
+  .hero-content p{
     font-size: 14px;
-    line-height: 1.7;
+    line-height: 1.9;
+    text-align: center;
   }
 
-  .hero-right h2 {
-    font-size: 20px;
-  }
-
-  ul.link-list li a {
-    font-size: 15px;
-  }
-
-  /* BUTTONS */
-  .buttons {
+  .buttons{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 
   .dark-btn,
-  .light-btn {
+  .light-btn{
     width: 100%;
-    padding: 12px;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  .hero-right{
+    width: 100%;
+    padding: 20px;
+  }
+
+  .hero-right h2{
+    text-align: center;
+    font-size: 20px;
+  }
+
+  ul.link-list li a{
     font-size: 15px;
   }
 
   /* TEXT SECTION */
-  section {
-    padding: 20px 15px;
+  section{
+    padding: 20px;
   }
 
-  section h2 {
+  section h2{
     font-size: 24px;
-    margin: 20px 0;
-  }
-
-  section p {
-    font-size: 15px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    line-height: 1.7;
   }
 
-  /* SLIDESHOW SECTION */
-  .container {
+  section p{
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+
+  /* SLIDESHOW */
+  .container{
+    display: flex;
     flex-direction: column;
     height: auto;
   }
 
-  .left {
+  .left{
     width: 100%;
-    height: 350px;
+    height: 300px;
   }
 
-  .right {
+  .right{
     width: 100%;
     padding: 20px;
-    box-sizing: border-box;
   }
 
-  .caption {
+  .caption{
     width: 90%;
+    text-align: center;
   }
 
-  .caption h1 {
-    font-size: 22px;
+  .caption h1{
+    font-size: 20px;
   }
 
-  .caption p {
+  .caption p{
     font-size: 14px;
   }
 
   /* FOOTER */
-  .footer {
-    padding: 20px 15px;
+  .footer{
+    padding: 20px;
   }
 
-  .footer-top {
+  .footer-top{
+    display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  .footer-left {
+  .footer-left{
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
-  .footer-right {
+  .footer-right{
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
   }
 
-  .footer-section {
+  .footer-section{
     width: 100%;
-  }
-
-  .footer-section h4 {
-    font-size: 17px;
-  }
-
-  .footer-section p,
-  .footer-section li,
-  .footer-section a {
-    font-size: 14px;
+    text-align: center;
   }
 
   .newsletter-form input,
-  .newsletter-form button {
+  .newsletter-form button{
     width: 100%;
-    box-sizing: border-box;
   }
 
-  /* IMAGES */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
 }
